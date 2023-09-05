@@ -43,7 +43,7 @@ export const emailConfirmed = (email: string, code: string) => {
               </p>
               <p class="mt-3">
                 <a
-                  href="http://localhost:3000/verification/${email}/${code}"
+                  href="${process.env.LINKEMAIL}/verification/${email}/${code}"
                   class="btn btn-primary btn-sm"
                   >Confirmar Correo Electrónico</a
                 >

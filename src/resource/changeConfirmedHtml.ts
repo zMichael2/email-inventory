@@ -29,11 +29,11 @@ export const changeConfirmedHtml = (email: string, code: string) => {
       </div>
       <div class="text-center mt-4 font-weight-bold">
         <p>
-          Para cambiar la contraseña use este enlace y mofificalo: <span class="text-danger">http://localhost:3000/verficatePassword/${email}/code/passwoard</span>
+          Para cambiar la contraseña use este enlace y mofificalo: <span class="text-danger">${process.env.LINKEMAIL}/verficatePassword/${email}/code/passwoard</span>
         </p>
       </div>
       <form
-        action="http://localhost:3000/verficatePassword/${email}/code/passwoard"
+        action="${process.env.LINKEMAIL}/verficatePassword/${email}/code/passwoard"
         method="POST"
         class="mt-4"
       >
