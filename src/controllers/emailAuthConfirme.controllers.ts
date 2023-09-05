@@ -6,8 +6,6 @@ export const emailCodeNotification = async (req: Request, res: Response) => {
   try {
     const { email, code, type } = req.body;
 
-    console.log(email, "--------------------------");
-
     const message = maipOption(type, email, code);
     await sendEmail(message);
     res.status(200).json({ message: "The mail has been sent successfully" });

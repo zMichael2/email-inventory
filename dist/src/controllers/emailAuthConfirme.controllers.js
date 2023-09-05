@@ -15,7 +15,6 @@ const mailOption_helpers_1 = require("../helpers/mailOption.helpers");
 const emailCodeNotification = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     try {
         const { email, code, type } = req.body;
-        console.log(email, "--------------------------");
         const message = (0, mailOption_helpers_1.maipOption)(type, email, code);
         yield (0, emailAuthConfirme_service_1.sendEmail)(message);
         res.status(200).json({ message: "The mail has been sent successfully" });
